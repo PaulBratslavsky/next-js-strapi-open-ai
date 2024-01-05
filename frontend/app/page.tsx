@@ -29,9 +29,6 @@ export default function Home() {
     initialState
   );
 
-
-  const [formState, setFormState] = React.useState(initialState);
-
   return (
     <div className="mb-8" key={updateState?.data}>
       <GenerateDescriptionForm formAction={generateDescription} state={generateState} />
@@ -44,8 +41,8 @@ function GenerateDescriptionForm({
   formAction,
   state,
 }: {
-  formAction: any;
-  state: any;
+  readonly formAction: any;
+  readonly state: any;
 }) {
   return (
     <form
@@ -68,8 +65,8 @@ function SaveDescriptionForm({
   formAction,
   state,
 }: {
-  formAction: any;
-  state: any;
+  readonly formAction: any;
+  readonly state: any;
 }) {
   
   if (state.data === null) return null;
